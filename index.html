@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111923">
+  <meta name="description" content="NomenTek — Engineering & Technology. Electronics Design, Embedded Systems, Product Development and Prototyping.">
+  <title>NomenTek | Engineering & Technology</title>
+  <style>
+    :root{color-scheme:dark;--bg:#111923;--blue:#53a9ff;--muted:#a9b9ca;--line:#2a3b4c}
+    *{box-sizing:border-box}html{min-height:100%}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 78% 40%,#17283b 0%,#111923 56%,#0d151e 100%);color:#f4f7fb;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+    .wrap{max-width:1100px;min-height:100vh;margin:auto;padding:clamp(26px,5vw,68px);display:flex;flex-direction:column}
+    header,footer{display:flex;justify-content:space-between;align-items:center;gap:20px}.brand{font-size:clamp(24px,3vw,34px);font-weight:750;letter-spacing:-1.5px}.brand span,.accent{color:var(--blue)}.eyebrow{color:#8193a8;font-size:12px;letter-spacing:.2em;font-weight:600;text-align:right}
+    main{flex:1;display:flex;flex-direction:column;justify-content:center;padding:70px 0 90px}.circuit{width:100%;height:auto;max-height:230px;overflow:visible;margin-bottom:30px}.circuit .trace{stroke-dasharray:1100;stroke-dashoffset:1100;animation:draw 3s ease-out forwards}.circuit .trace.secondary{animation-delay:.45s}.node{animation:glow 3.4s ease-in-out infinite alternate}.node:nth-of-type(2n){animation-delay:1.3s}
+    h1{font-size:clamp(38px,6.3vw,76px);letter-spacing:-.055em;line-height:1.08;font-weight:750;margin:0 0 26px;max-width:900px}p.services{font-size:clamp(15px,1.65vw,19px);line-height:1.8;color:var(--muted);margin:0;max-width:820px}
+    footer{border-top:1px solid var(--line);padding-top:25px;color:#a9b9ca;font-size:13px}.status{display:flex;align-items:center;gap:11px}.dot{width:8px;height:8px;border-radius:50%;background:var(--blue);box-shadow:0 0 12px #53a9ff66;flex:none}.domain{color:#7d90a5}
+    @keyframes draw{to{stroke-dashoffset:0}}@keyframes glow{from{opacity:.4}to{opacity:1}}
+    @media(max-width:620px){.wrap{padding:26px 23px}header{align-items:flex-start}.eyebrow{font-size:9px;letter-spacing:.12em;max-width:120px;line-height:1.6}main{padding:70px 0}.circuit{margin-bottom:24px}footer{align-items:flex-start;flex-direction:column;gap:14px}h1{letter-spacing:-.045em}}
+    @media(prefers-reduced-motion:reduce){.circuit .trace{animation:none;stroke-dashoffset:0}.node{animation:none}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand" aria-label="NomenTek">Nomen<span>Tek</span></div>
+      <div class="eyebrow">ENGINEERING &amp; TECHNOLOGY</div>
+    </header>
+    <main>
+      <svg class="circuit" viewBox="0 0 1000 210" role="img" aria-label="Abstract electronic circuit traces" xmlns="http://www.w3.org/2000/svg">
+        <defs><pattern id="grid" width="45" height="45" patternUnits="userSpaceOnUse" patternTransform="skewX(-28)"><path d="M45 0H0V45" fill="none" stroke="#24405c" stroke-width=".8" opacity=".55"/></pattern><linearGradient id="tracegrad" x1="0" x2="1"><stop stop-color="#1e5b93"/><stop offset=".5" stop-color="#53a9ff"/><stop offset="1" stop-color="#3678bb"/></linearGradient></defs>
+        <rect width="1000" height="210" fill="url(#grid)" opacity=".6"/>
+        <path class="trace" d="M0 157 H210 L267 100 H410 L487 30 H700 L770 95 H1000" fill="none" stroke="url(#tracegrad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <path class="trace secondary" d="M0 185 H300 L357 135 H540 L600 182 H1000" fill="none" stroke="#607a97" stroke-width="2" opacity=".75" stroke-linecap="round"/>
+        <path d="M490 30 H570 L625 85 H880" fill="none" stroke="#3d6385" stroke-width="1.5" opacity=".65"/>
+        <g fill="#53a9ff"><circle class="node" cx="210" cy="157" r="5"/><circle class="node" cx="410" cy="100" r="5"/><circle class="node" cx="700" cy="30" r="5"/><circle class="node" cx="770" cy="95" r="5"/><circle class="node" cx="540" cy="135" r="5"/></g>
+        <g fill="none" stroke="#53a9ff" stroke-width="1" opacity=".5"><circle cx="210" cy="157" r="11"/><circle cx="410" cy="100" r="11"/><circle cx="700" cy="30" r="11"/><circle cx="770" cy="95" r="11"/><circle cx="540" cy="135" r="11"/></g>
+      </svg>
+      <h1>Engineering Ideas Into <span class="accent">Reality.</span></h1>
+      <p class="services">Electronics Design · Embedded Systems · Product Development · Prototyping</p>
+    </main>
+    <footer><div class="status"><span class="dot" aria-hidden="true"></span><span>Our website is under development.</span></div><span class="domain">nomentek.com</span></footer>
+  </div>
+</body>
+</html>
